@@ -5,6 +5,7 @@ export default {
 		extend: {
 			maxWidth: {
 				1440: '1440px',
+				480: '480px',
 			},
 			maxHeight: {
 				640: '640px',
