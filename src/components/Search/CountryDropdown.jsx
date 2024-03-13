@@ -14,7 +14,6 @@ const CountryDropdown = () => {
 
 	const houseState = createSelectors(useHouseStore);
 	const { country, countries, updateCountry } = houseState.use;
-	console.log({ country, countries, updateCountry });
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
@@ -35,7 +34,7 @@ const CountryDropdown = () => {
 				onClick={toggleDropdown}
 			>
 				<RiMapPinLine className='dropdown-icon-primary' />
-				<div>
+				<div className='flex flex-col items-start'>
 					<div className='text-[15px] font-medium leading-tight'>{country}</div>
 					<div className='text-[13px]'>Select your place</div>
 				</div>
