@@ -23,12 +23,10 @@ const Search = () => {
 		let newHouse = cloneDeep(originHouse);
 
 		if (!isDefaultCountry) {
-			console.log('here');
 			newHouse = newHouse.filter((house) => house.country === country);
 		}
 
 		if (!isDefaultProperty) {
-			console.log('here1');
 			newHouse = newHouse.filter((house) => house.type === property);
 		}
 

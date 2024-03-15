@@ -1,4 +1,5 @@
 import { uniq } from 'lodash';
+import { housesData } from './data';
 
 export const getAllCountries = (houses) => {
 	const countries = houses.map((house) => house.country);
@@ -21,4 +22,8 @@ export const getPrice = (priceString) => {
 	const maxPrice = parseInt(priceString.split(' ')[2]);
 
 	return { minPrice, maxPrice };
+};
+
+export const getCurrentHouse = (id) => {
+	return housesData.find((house) => parseInt(id) === house.id);
 };
